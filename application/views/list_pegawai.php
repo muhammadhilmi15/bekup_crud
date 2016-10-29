@@ -84,7 +84,7 @@ function random($panjang) {
                     <li><!-- start message -->
                       <a href="#">
                         <div class="pull-left">
-                          <img src="<?php echo base_url('assets/dist/img/user2-160x160.jpg')?>" class="img-circle" alt="User Image">
+                          <img src="<?php echo base_url('assets/dist/img/hilmi.jpg')?>" class="img-circle" alt="User Image">
                         </div>
                         <h4>
                           Support Team
@@ -266,16 +266,16 @@ function random($panjang) {
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="<?php echo base_url('assets/dist/img/user2-160x160.jpg')?>" class="user-image" alt="User Image">
-                <span class="hidden-xs">Alexander Pierce</span>
+                <img src="<?php echo base_url('assets/dist/img/hilmi.jpg')?>" class="user-image" alt="User Image">
+                <span class="hidden-xs">Muhammad Hilmi H.</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header">
-                  <img src="<?php echo base_url('assets/dist/img/user2-160x160.jpg')?>" class="img-circle" alt="User Image">
+                  <img src="<?php echo base_url('assets/dist/img/hilmi.jpg')?>" class="img-circle" alt="User Image">
 
                   <p>
-                    Alexander Pierce - Web Developer
+                    Muhammad Hilmi H. - Web Developer
                     <small>Member since Nov. 2012</small>
                   </p>
                 </li>
@@ -320,10 +320,10 @@ function random($panjang) {
         <!-- Sidebar user panel -->
         <div class="user-panel">
           <div class="pull-left image">
-            <img src="<?php echo base_url('assets/dist/img/user2-160x160.jpg')?>" class="img-circle" alt="User Image">
+            <img src="<?php echo base_url('assets/dist/img/hilmi.jpg')?>" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
-            <p>Alexander Pierce</p>
+            <p>Muhammad Hilmi H.</p>
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
           </div>
         </div>
@@ -342,7 +342,7 @@ function random($panjang) {
         <ul class="sidebar-menu">
           <li class="header">MAIN NAVIGATION</li>
           <li><a href="<?php echo base_url('Crud')?>"><i class="glyphicon glyphicon-save-file"></i><span>Tambah Pegawai</span></a></li>
-          <li><a href="<?php echo base_url('Crud/tampil')?>"><i class="glyphicon glyphicon-list-alt"></i><span>Tampil Pegawai</span></a></li>
+          <li class="active"><a href="<?php echo base_url('Crud/tampil')?>"><i class="glyphicon glyphicon-list-alt"></i><span>Tampil Pegawai</span></a></li>
         </ul>
       </section>
       <!-- /.sidebar -->
@@ -371,6 +371,7 @@ function random($panjang) {
                     <th>Kelamin</th>
                     <th>Posisi</th>
                     <th>Status</th>
+                    <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -379,9 +380,9 @@ function random($panjang) {
                       <td><?php echo $u->id_pegawai ?></td>
                       <td><?php echo $u->nama ?></td>
                       <td><?php echo $u->no_telp ?></td>
-                      <td><?php echo $u->kota ?></td>
-                      <td><?php echo $u->kelamin ?></td>
-                      <td><?php echo $u->id_posisi ?></td>
+                      <td><?php echo $u->nama_kota ?></td>
+                      <td><?php echo $u->nama_kelamin ?></td>
+                      <td><?php echo $u->nama_posisi ?></td>
                       <td><?php echo $u->status ?></td>
                       <td style="width:80px;">
                         <a href="<?= base_url() ?>Crud/edit/<?= $u->id_pegawai ?>" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-edit"></i></a>

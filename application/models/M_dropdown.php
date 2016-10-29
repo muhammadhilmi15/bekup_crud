@@ -5,24 +5,38 @@ if (!defined('BASEPATH'))
 
 class M_dropdown extends CI_Model
 {
-    // get data dropdown
-    function dd_provinsi()
-    {
-        // ambil data dari db
-        query
-        $this->db->order_by('provinsi', 'asc');
-        $result = $this->db->get('provinsi');
 
-        // bikin array
-        // please select berikut ini merupakan tambahan saja agar saat pertama
-        // diload akan ditampilkan text please select.
-        $dd[''] = 'Please Select';
-        if ($result->num_rows() > 0) {
-            foreach ($result->result() as $row) {
-            // tentukan value (sebelah kiri) dan labelnya (sebelah kanan)
-                $dd[$row->id_provinsi] = $row->provinsi;
-            }
+    function dd_kelamin()
+    {
+        $query = "SELECT * FROM kelamin";
+        $kelamin = $this->db->query($query);
+        if ($kelamin->num_rows() > 0) {
+            return $kelamin->result();
+        } else {
+            return array();
         }
-        return $dd;
     }
+
+    function dd_kota()
+    {
+        $query = "SELECT * FROM kota";
+        $kota = $this->db->query($query);
+        if ($kota->num_rows() > 0) {
+            return $kota->result();
+        } else {
+            return array();
+        }
+    }
+
+    function dd_posisi()
+    {
+        $query = "SELECT * FROM posisi";
+        $posisi = $this->db->query($query);
+        if ($posisi->num_rows() > 0) {
+            return $posisi->result();
+        } else {
+            return array();
+        }
+    }
+
 }

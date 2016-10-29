@@ -4,7 +4,7 @@ class M_pegawai extends CI_Model {
 
     public function tampil_pegawai()
     {
-        $query = "SELECT * FROM pegawai";
+        $query = "SELECT pegawai.id_pegawai,pegawai.nama, pegawai.no_telp, pegawai.status, kota.nama_kota, kelamin.nama_kelamin, posisi.nama_posisi FROM pegawai JOIN kota ON pegawai.kota = kota.id_kota JOIN kelamin ON pegawai.kelamin = kelamin.id_kelamin JOIN posisi ON pegawai.id_posisi = posisi.id_posisi";
         $hasil = $this->db->query($query);
         if ($hasil->num_rows() > 0) {
             return $hasil->result();

@@ -23,12 +23,21 @@ class Crud extends CI_Controller {
 			 parent::__construct();
 			 $this->load->helper(array('form', 'url'));
 			 $this->load->model('M_pegawai');
+			 $this->load->model('M_dropdown');
 			 $this->load->library('form_validation');
 	 }
 
 	public function index()
 	{
-		$this->load->view('main_page');
+		$data = array(
+			'kota' => $this->M_dropdown->dd_kota(),
+			'kelamin' => $this->M_dropdown->dd_kelamin(),
+			'posisi' => $this->M_dropdown->dd_posisi(),  
+		);
+		// $data['kota'] = $this->M_dropdown->dd_kota();
+		// $data['kelamin'] = $this->M_dropdown->dd_kelamin();
+		// $data['posisi'] = $this->M_dropdown->dd_posisi();
+		$this->load->view('main_page',$data);
 	}
 
 	public function insert()
